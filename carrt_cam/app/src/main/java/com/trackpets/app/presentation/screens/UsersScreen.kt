@@ -164,7 +164,6 @@ fun UserDialog(
                 OutlinedTextField(value = lastName, onValueChange = { lastName = it }, label = { Text("Apellido") }, modifier = Modifier.fillMaxWidth())
                 OutlinedTextField(value = username, onValueChange = { username = it }, label = { Text("Username") }, modifier = Modifier.fillMaxWidth())
                 
-                // Contraseña siempre visible, pero opcional en edición
                 OutlinedTextField(
                     value = password, 
                     onValueChange = { password = it }, 
@@ -175,7 +174,6 @@ fun UserDialog(
                 OutlinedTextField(value = email, onValueChange = { email = it }, label = { Text("Email") }, modifier = Modifier.fillMaxWidth())
                 OutlinedTextField(value = phone, onValueChange = { phone = it }, label = { Text("Teléfono") }, modifier = Modifier.fillMaxWidth())
                 
-                // Selector de Rol
                 Box {
                     OutlinedButton(onClick = { expanded = true }, modifier = Modifier.fillMaxWidth()) {
                         Text("Rol: $role")
