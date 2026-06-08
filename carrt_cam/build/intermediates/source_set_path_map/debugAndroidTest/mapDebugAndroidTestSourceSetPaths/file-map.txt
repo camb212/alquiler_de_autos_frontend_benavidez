@@ -1,0 +1,4 @@
+com.trackpets.app.test-androidTest-0 C:\Kotlin_Cam\carrt_cam\build\generated\res\resValues\androidTest\debug
+com.trackpets.app.test-mergeDebugAndroidTestResources-1 C:\Kotlin_Cam\carrt_cam\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.trackpets.app.test-mergeDebugAndroidTestResources-2 C:\Kotlin_Cam\carrt_cam\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.trackpets.app.test-debugAndroidTest-3 C:\Kotlin_Cam\carrt_cam\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources
