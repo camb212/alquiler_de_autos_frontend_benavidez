@@ -80,7 +80,6 @@ class RentalRepositoryImpl(
         api.deleteVehicle(id)
     }
 
-    // --- Reservaciones ---
     override suspend fun getReservations(): Result<List<Reservation>> = runCatching {
         api.getReservations().map { it.toDomain() }
     }
@@ -101,7 +100,6 @@ class RentalRepositoryImpl(
         api.deleteReservation(id)
     }
 
-    // --- Usuarios ---
     override suspend fun getUsers(search: String?): Result<List<User>> = runCatching {
         api.getUsers(search).map { it.toUserDomain() }
     }
@@ -122,7 +120,6 @@ class RentalRepositoryImpl(
         api.deleteUser(id)
     }
 
-    // --- Reseñas ---
     override suspend fun getReviews(vehicleId: Int?): Result<List<Review>> = runCatching {
         api.getReviews(vehicleId).map { it.toDomain() }
     }
@@ -135,7 +132,6 @@ class RentalRepositoryImpl(
         api.deleteReview(id)
     }
 
-    // --- Pagos ---
     override suspend fun getPayments(): Result<List<Payment>> = runCatching {
         api.getPayments().map { it.toDomain() }
     }
