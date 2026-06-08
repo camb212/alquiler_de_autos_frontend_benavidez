@@ -17,7 +17,6 @@ class RentalRepositoryImpl(
 
     override suspend fun login(username: String, password: String): Result<Unit> = runCatching {
         val response = api.login(LoginRequestDto(username, password))
-        // Django puede devolver 'token' o 'key' según la configuración
         val token = response.token ?: response.key ?: throw Exception("No se recibió un token de acceso")
         
         prefs.edit().apply {
@@ -38,7 +37,7 @@ class RentalRepositoryImpl(
     
     override suspend fun getCurrentUserId(): Int = prefs.getInt("user_id", -1)
 
-    // --- Categorías ---
+   
     override suspend fun getCategories(search: String?): Result<List<Category>> = runCatching {
         api.getCategories(search).map { it.toDomain() }
     }
@@ -59,7 +58,6 @@ class RentalRepositoryImpl(
         api.deleteCategory(id)
     }
 
-    // --- Vehículos ---
     override suspend fun getVehicles(search: String?, available: Boolean?): Result<List<Vehicle>> = runCatching {
         api.getVehicles(search, available).map { it.toDomain() }
     }
