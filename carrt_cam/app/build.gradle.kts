@@ -15,7 +15,6 @@ android {
         versionCode = 1
         versionName = "1.0"
 
-        // Corregido: Se quita el puerto :8000 ya que el servidor responde en el puerto estándar
         buildConfigField("String", "API_BASE_URL", "\"http://74.163.98.15/\"")
     }
 

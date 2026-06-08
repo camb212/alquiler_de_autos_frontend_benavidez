@@ -30,7 +30,6 @@ fun TrackPetsApp() {
     }
 
     if (!isLoggedIn) {
-        // Flujo de Autenticación
         NavHost(navController, startDestination = TrackPetsRoute.Login.route) {
             composable(TrackPetsRoute.Login.route) {
                 LoginScreen(
@@ -52,7 +51,6 @@ fun TrackPetsApp() {
             }
         }
     } else {
-        // App Principal (Post-Login)
         val items = listOf(
             Triple(TrackPetsRoute.Dashboard.route, "Inicio", Icons.Default.Home),
             Triple(TrackPetsRoute.Vehicles.route, "Vehículos", Icons.Default.TimeToLeave),
