@@ -8,6 +8,5 @@ data class User(
     val email: String,
     val phone: String,
     val role: String,
-    // Campo necesario para el registro
     val password: String? = null
 )
