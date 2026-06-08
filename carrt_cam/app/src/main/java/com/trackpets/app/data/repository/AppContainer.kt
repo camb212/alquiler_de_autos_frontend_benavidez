@@ -23,7 +23,6 @@ class AppContainer(private val context: Context) {
         
         val request = chain.request().newBuilder()
         if (token != null) {
-            // Corregido: JWT requiere el prefijo "Bearer" en lugar de "Token"
             request.addHeader("Authorization", "Bearer $token")
         }
         chain.proceed(request.build())

@@ -5,11 +5,11 @@ import retrofit2.http.*
 
 interface TrackPetsApi {
     
-    // --- Autenticación ---
+ 
     @POST("api/login/")
     suspend fun login(@Body request: LoginRequestDto): TokenResponseDto
 
-    // --- Categorías ---
+    
     @GET("api/categories/")
     suspend fun getCategories(
         @Query("search") search: String? = null
@@ -27,7 +27,7 @@ interface TrackPetsApi {
     @DELETE("api/categories/{id}/")
     suspend fun deleteCategory(@Path("id") id: Int)
 
-    // --- Vehículos ---
+   
     @GET("api/vehicles/")
     suspend fun getVehicles(
         @Query("search") search: String? = null,
@@ -46,7 +46,7 @@ interface TrackPetsApi {
     @DELETE("api/vehicles/{id}/")
     suspend fun deleteVehicle(@Path("id") id: Int)
 
-    // --- Reservaciones ---
+  
     @GET("api/reservations/")
     suspend fun getReservations(): List<ReservationDto>
     
@@ -62,7 +62,7 @@ interface TrackPetsApi {
     @DELETE("api/reservations/{id}/")
     suspend fun deleteReservation(@Path("id") id: Int)
 
-    // --- Usuarios ---
+    
     @GET("api/users/")
     suspend fun getUsers(
         @Query("search") search: String? = null
@@ -80,7 +80,6 @@ interface TrackPetsApi {
     @DELETE("api/users/{id}/")
     suspend fun deleteUser(@Path("id") id: Int)
 
-    // --- Reseñas ---
     @GET("api/reviews/")
     suspend fun getReviews(
         @Query("vehicle") vehicleId: Int? = null
@@ -92,7 +91,7 @@ interface TrackPetsApi {
     @DELETE("api/reviews/{id}/")
     suspend fun deleteReview(@Path("id") id: Int)
 
-    // --- Pagos ---
+  
     @GET("api/payments/")
     suspend fun getPayments(): List<PaymentDto>
 
